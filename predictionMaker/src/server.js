@@ -3,7 +3,7 @@
 
 const express = require("express");
 const path = require("path");
-const predictRoutes = require("./routes/predictRoutes");
+const predictRoutes = require("../routes/predictRoutes");
 const { initModel } = require("./services/tfModelService");
 
 const PORT = process.env.PORT || 3002;

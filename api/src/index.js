@@ -5,7 +5,7 @@ const http = require('http');
 const express = require('express');
 const mongoose = require('mongoose');
 const Producto = require('./odels/producto');
-const productoController = require('./controllers/productoController');
+const productoController = require('./src/controllers/productoController');
 const app = express();
 const PORT = 8080;
 
