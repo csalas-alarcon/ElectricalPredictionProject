@@ -1,0 +1,27 @@
+{
+  "name": "apirest-producto",
+  "version": "1.0.0",
+  "description": "api para coordinar recursos",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/csalas-alarcon/ElectricalPredictionProject/api.git"
+  },
+  "keywords": [
+    "CRUD",
+    "REST",
+    "node",
+    "express",
+    "mongo"
+  ],
+  "author": "Carlos Salas Alarcón",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.2.0",
+    "mogodb": "^0.0.1-security",
+    "mongoose": "^9.0.0"
+  }
+}
