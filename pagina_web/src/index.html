@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PREDICCIÓN Eléctrica</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>PREDICCIÓN Eléctrica</h1>
+
+    <form id="predictionForm">
+      <div>
+        <label for="days">Número de días:</label>
+        <select id="days" name="days">
+          <option value="1">1 día</option>
+          <option value="2">2 días</option>
+          <option value="3">3 días</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="building">Edificio:</label>
+        <select id="building" name="building">
+          <option value="german-bernancer">Germán Bernáncer</option>
+        </select>
+      </div>
+
+      <button type="button" id="predictBtn">PREDECIR</button>
+    </form>
+
+    <div id="result"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
