@@ -3,4 +3,22 @@ Acquire -> Falta por Hacer
 Orquestrador -> Falta por Imaginar
 UI / API -> FALTA POR IMAGINAR
 
-P3. PREDICCIÓN DE CONSUMO ELÉCTRICO CON ARQUITECTURA DISTRIBUIDAObjetivo del ProyectoConstruir una aplicación distribuida para predecir el consumo eléctrico en un edificio de la Universidad de Alicante.El objetivo didáctico principal es el diseño y despliegue de un sistema distribuido real, comprendiendo cómo múltiples servicios cooperan y se comunican a través de la red, siguiendo el modelo TCP/IP.Arquitectura y Tecnologías ClaveEl sistema se basa en una Arquitectura de Microservicios con comunicación mediante APIs REST y almacenamiento en MongoDB.Node.js (Base de Microservicios)Node.js se elige como la tecnología base para todos los microservicios por su:Eficiencia: Modelo asíncrono y no bloqueante, ideal para manejar peticiones concurrentes en sistemas distribuidos.Unicidad de Lenguaje: Utiliza JavaScript, facilitando la integración con posibles interfaces web (frontend) y aprovechando un ecosistema maduro (Express, Mongoose, TensorFlow.js).Escalabilidad: Ligero, rápido y optimizado para el despliegue en contenedores Docker.Estilo de MicroserviciosEl diseño modular favorece:Modularidad: Cada servicio se centra en una única función (datos, procesamiento, predicción o interfaz).Mantenimiento: Aislamiento de fallos o cambios, limitando su impacto al resto del sistema.Despliegue Independiente: Posibilidad de escalar servicios de forma autónoma según la necesidad.Comunicación RESTLos microservicios se comunican utilizando API REST (Representational State Transfer) sobre el protocolo HTTP, lo que asegura:Sencillez: Uso de métodos HTTP estándar (GET, POST) y formato de datos JSON.Interoperabilidad: Facilita que cualquier cliente o lenguaje pueda consumir la API.Escalabilidad: Las operaciones sin estado (stateless) simplifican el escalado horizontal.Fundamento de Redes: Permite observar y analizar fácilmente las capas de red (TCP/IP).Flujo del Modelo de Predicción (IA)El proyecto adopta un flujo de trabajo profesional que separa la fase de entrenamiento de la fase de inferencia (predicción).FaseEntorno PrincipalHerramienta ClaveRazónEntrenamiento (Offline)PythonKaggle (TensorFlow, Keras)Aprovecha el ecosistema científico (cálculo intensivo) y evita problemas de instalación local.Predicción (Inferencia/Online)Node.jsTensorFlow.jsPermite respuestas rápidas y estables dentro de un servicio web de producción.El modelo entrenado en Python se exporta al formato TensorFlow.js para su uso directo dentro del microservicio de Node.js, integrando herramientas de ciencia de datos con la arquitectura de servicios web distribuida.
+PREDICCIÓN DE CONSUMO ELÉCTRICO CON ARQUITECTURA DISTRIBUIDA
+
+En esta práctica construiremos una aplicación distribuida que permite predecir el consumo eléctrico en el edificio de la Universidad de Alicante Germán Bernancer. El proyecto se desarrolla en Node.js, empleando una arquitectura de microservicios REST y almacenamiento en MongoDB.
+
+Para el desarrollo del proyecto se usa la metodología de gestión de actividades SCRUM. Un tablero público muestra la información en: https://trello.com/b/pqLWekyD/practica-sd
+
+- Node.js es la base de todos los microservicios del proyecto
+
+- Se usa un sistema de Microservicios, donde cada componente tiene una función bien definida y se comunica con los demás mediante peticiones de red.
+
+- Los microservicios se comunican utilizando una API RESTful.
+
+- Se entrenará un modelo de IA de estructura MLP de manera offline y después se usará para hacer inferencia del gasto eléctrico en el siguiente o próximos días.
+
+- Para el diseño y entrenamiento del modelo se usará Python y las herramientas correspondientes como Numpy, Keras, Tensorflow...
+
+- El Entrenamiento se realizará de forma remota usando la aplicación en la nuble Kaggle que presta temporalmente poder computacional, parecido a Jupyter.
+
+Además de este README.md hay una memoria con TODA la información pertinente.
